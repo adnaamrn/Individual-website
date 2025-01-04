@@ -44,6 +44,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .date-time {
+            text-align: center;
+            font-size: 1.5em;
+            color: #240430;
+            margin: 15px 0;
+        }
         /* Buttons Section */
         .buttons {
             display: flex;
@@ -109,6 +115,18 @@
             </a>
         </div>
     </div>
+
+    <div class="date-time" id="dateTime"></div>
+
+<script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeElement = document.getElementById('dateTime');
+            dateTimeElement.innerText = now.toLocaleString(); // Display date and time in locale format
+        }
+        setInterval(updateDateTime, 1000); // Update every second
+        updateDateTime(); // Initial call to set the time immediately
+    </script>
     
     <style>
         .circle-frame {
@@ -178,6 +196,11 @@
     </footer>
 </body>
 </html>
+    
+
+
+
+
 
 
 
